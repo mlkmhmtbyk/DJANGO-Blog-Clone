@@ -1,2 +1,0 @@
-# DJANGO
-Django course metarials
