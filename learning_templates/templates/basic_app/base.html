@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    </head>
+  <body>
+    <nav class = "navbar navbar-default navbar-static-top">
+      <div class="container">
+        <ul class = "nav navbar-nav">
+          <li><a class = "navbar-brand" href="{% url 'index' %}">BRAND</a></li>
+          <li><a class = "navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a class = "navbar-link" href="{% url 'basic_app:other'%}">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      {%block body_block %}
+      <!--Anything outside of this will be inherited if you extend! -->
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
